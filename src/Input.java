@@ -10,8 +10,9 @@ public class Input {
 
         while( true ){
             String texto = scanner.next();
-            if( "sair".equals(texto) ) 
-                break;
+
+            if( "sair".equals(texto) ) break;
+            else lista.add( texto );
         }
             
         scanner.close();
