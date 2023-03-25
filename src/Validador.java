@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Validador {
     /**
      * Validar número de CPF
@@ -103,5 +105,31 @@ class Validador {
         resto = soma % 11;
         if( resto < 2 ) return segundoDigitoVerificador == 0;
         else            return 11 - resto == segundoDigitoVerificador;
+    }
+
+
+    public static void main( String[] args ){
+        System.out.println( "--- Validadores ---\n * Máscaras são ignoradas !" );
+        System.out.println( "Digite uma opção:\n- 1 para CPF\n- 2 para CNPJ" );
+        
+        Scanner scanner = new Scanner( System.in );
+        String opção = scanner.next();
+
+        System.out.println( "Digite o valor a ser validado" );
+        String valor = scanner.next();
+
+        switch( opção ){
+            case "1":
+                System.out.println( "Resultado: " + Validador.Cpf(valor) );
+                break;
+            case "2":
+                System.out.println(  "Resultado: " + Validador.Cnpj( valor ) );
+                break;
+            default:
+                System.out.println( "Opção inválida" );
+                break;
+        }
+
+        scanner.close();
     }
 }
