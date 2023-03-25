@@ -123,7 +123,7 @@ class Validador {
                 System.out.println( "Resultado: " + Validador.Cpf(valor) );
                 break;
             case "2":
-                System.out.println(  "Resultado: " + Validador.Cnpj( valor ) );
+                System.out.println( "Resultado: " + Validador.Cnpj(valor) );
                 break;
             default:
                 System.out.println( "Opção inválida" );
